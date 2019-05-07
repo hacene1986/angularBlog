@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row">
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <div class="col-12">
+      <label for="title">Title</label>
+      <input type="text" name="titre" class="w-100" ngModel/>
+    </div>
+    <div class="col-12">
+      <label for="resume">Resume</label>
+      <input type="text" name="resume" class="w-100" ngModel/>
+    </div>
+    <div class="col-12">
+      <label for="description">Description</label>
+      <textarea type="text" name="description" id="" rows="10" class="w-100" ngModel></textarea>
+    </div>
+    <div class="col-6">
+      <label for="author">Author</label>
+      <input type="text" name="author" ngModel/>
+    </div>
+    <div class="col-6">
+      <label for="date">Date</label>
+      <input type="date" name="date" ngModel/>
+    </div>
+    <div class="col-12">
+      <label for="picture">Picture</label>
+      <input type="picture" name="picture" ngModel/>
+    </div>
+    <div class="col-12">
+      <input type="hidden" name="like" value="0" ngModel>
+      <button type="submit" class="btn btn-success">Add</button>
+    </div>
+  </form>
+  </div>
+</div>

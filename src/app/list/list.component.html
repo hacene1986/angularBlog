@@ -1,0 +1,17 @@
+<div class="container">
+    <div [ngClass]="{'bg-success': post.like > 0, 'bg-danger': post.like < 0}" *ngFor="let post of listPost,  let i = index">
+      <div class="row">
+        <div class="col-8">
+        <h2  [routerLink]="['/detail',i]" routerLinkActive="router-link-active" >{{post.titre}}</h2>
+      </div>
+        <div class="col-4">
+        <span>{{post.date}}</span>
+      </div>
+      </div>
+        <p>{{post.description}}</p>
+        <button class="btn btn-success" (click)="addlike(i)">Love it</button>
+        <button class="btn btn-danger" (click)="unliked(i)">Dont't love it</button>
+        <button class="btn btn-warning" (click)="delete(i)">Supprimer</button>
+        <hr>
+      </div>
+  </div>
